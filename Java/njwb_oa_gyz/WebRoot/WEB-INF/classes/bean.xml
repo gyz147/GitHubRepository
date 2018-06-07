@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans>
+    <!--   事务 -->
+	<bean id="tx" class="com.njwb.oa.transaction.impl.TransactionImpl"/>
+	
+	
+	<!--  dao -->
+    <bean id="deptDao" class="com.njwb.oa.dao.impl.DeptDaoImpl"/>
+    <bean id="userDao" class="com.njwb.oa.dao.impl.UserDaoImpl"/>
+    <bean id="empDao" class="com.njwb.oa.dao.impl.EmpDaoImpl"/>
+    <bean id="holidayDao" class="com.njwb.oa.dao.impl.HolidayDaoImpl"/>
+    <bean id="expendDao" class="com.njwb.oa.dao.impl.ExpendDaoImpl"/>
+    <bean id="configDao" class="com.njwb.oa.dao.impl.ConfigDaoImpl"/>
+    <bean id="roleDao" class="com.njwb.oa.dao.impl.RoleDaoImpl"/>
+    <bean id="permissionDao" class="com.njwb.oa.dao.impl.PermissionDaoImpl"/>
+    <bean id="menuDao" class="com.njwb.oa.dao.impl.MenuDaoImpl"/>
+    <bean id="workFlowDao" class="com.njwb.oa.dao.impl.WorkFlowDaoImpl"/>
+    
+    
+    <!-- service -->
+    <bean id = "deptService" class="com.njwb.oa.service.impl.DeptServiceImpl">
+         <property name="deptDao" ref="deptDao"/>
+         <property name="tx" ref="tx"/>
+    </bean>
+    <bean id = "userService" class="com.njwb.oa.service.impl.UserServiceImpl">
+         <property name="userDao" ref="userDao"/>
+         <property name="tx" ref="tx"/>
+    </bean>
+    <bean id = "empService" class="com.njwb.oa.service.impl.EmpServiceImpl">
+         <property name="empDao" ref="empDao"/>
+         <property name="tx" ref="tx"/>
+    </bean>
+    <bean id = "holidayService" class="com.njwb.oa.service.impl.HolidayServiceImpl">
+         <property name="holidayDao" ref="holidayDao"/>
+         <property name="tx" ref="tx"/>
+    </bean>
+    <bean id = "expendService" class="com.njwb.oa.service.impl.ExpendServiceImpl">
+         <property name="expendDao" ref="expendDao"/>
+         <property name="tx" ref="tx"/>
+    </bean> 
+    <bean id = "configService" class="com.njwb.oa.service.impl.ConfigServiceImpl">
+         <property name="configDao" ref="configDao"/>
+    </bean>
+    <bean id = "roleService" class="com.njwb.oa.service.impl.RoleServiceImpl">
+         <property name="roleDao" ref="roleDao"/>
+         <property name="tx" ref="tx"/>
+    </bean> 
+    <bean id = "permissionService" class="com.njwb.oa.service.impl.PermissionServiceImpl">
+         <property name="permissionDao" ref="permissionDao"/>
+         <property name="tx" ref="tx"/>
+    </bean>
+    <bean id = "menuService" class="com.njwb.oa.service.impl.MenuServiceImpl">
+         <property name="menuDao" ref="menuDao"/>
+    </bean>  
+    <bean id = "workFlowService" class="com.njwb.oa.service.impl.WorkFlowServiceImpl">
+         <property name="workFlowDao" ref="workFlowDao"/>
+         <property name="tx" ref="tx"/>
+    </bean>
+
+</beans>

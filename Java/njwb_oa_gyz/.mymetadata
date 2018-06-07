@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="njwb_oa_gyz"
+  id="myeclipse.1474617876650"
+  context-root="/njwb_oa_gyz"
+  j2ee-spec="5.0"
+  archive="njwb_oa_gyz.war">
+  <attributes>
+    <attribute name="webrootdir" value="/WebRoot" />
+  </attributes>
+</project-module>
+
