@@ -1,0 +1,17 @@
+<modify-entry
+   committed-rev="773"
+   last-author="stu"
+   name="pi5.jpg"
+   committed-date="2016-12-08T07:38:03.725283Z"/>
+<modify-entry
+   checksum="335b43c9235751d36e98e875c0a95765"
+   name="pi5.jpg"/>
+<delete-changelist
+   name="pi5.jpg"/>
+<committed
+   name="pi5.jpg"
+   revision="773"/>
+<modify-wcprop
+   name="pi5.jpg"
+   propname="svn:wc:ra_dav:version-url"
+   propval="/svn/core/!svn/ver/773/%E4%B8%89%E9%98%B6%E6%AE%B5%E9%A1%B9%E7%9B%AE/Beans/WebRoot/images/pi5.jpg"/>

@@ -1,0 +1,10 @@
+#Wed Nov 16 09:24:42 CST 2016
+DELEGATES_PREFERENCE=delegateValidatorList
+USER_BUILD_PREFERENCE=enabledBuildValidatorList
+USER_MANUAL_PREFERENCE=enabledManualValidatorList
+USER_PREFERENCE=overrideGlobalPreferencesfalse
+eclipse.preferences.version=1
+override=false
+suspend=false
+vals/org.eclipse.jst.jsp.core.JSPBatchValidator/groups=0107include01113projectNature131org.eclipse.jdt.core.javanature0107include110111contentType134org.eclipse.jst.jsp.core.jspsourceF111contentType142org.eclipse.jst.jsp.core.jspfragmentsourceF111contentType134org.eclipse.jst.jsp.core.tagsourceT07fileext03jspF07fileext04jspfF07fileext03jsfF07fileext03tagF07fileext04tagfF07fileext03jsvF07fileext04jtplF0107exclude0104file122jquery.validate.min.jsF01
+vf.version=3

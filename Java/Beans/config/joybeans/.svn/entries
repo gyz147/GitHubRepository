@@ -1,0 +1,43 @@
+10
+
+dir
+0
+http://10.0.6.98/svn/core/%E4%B8%89%E9%98%B6%E6%AE%B5%E9%A1%B9%E7%9B%AE/Beans/config/joybeans
+http://10.0.6.98/svn/core
+add
+
+
+
+
+
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+4c389d00-beb8-a64c-96d5-b1accb1cbc81
+
+
+
+
+
+
+
+empty
+
+joybeans.properties
+file
+
+
+
+add
+

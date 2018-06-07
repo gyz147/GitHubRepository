@@ -1,0 +1,245 @@
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/core/!svn/ver/773/%E4%B8%89%E9%98%B6%E6%AE%B5%E9%A1%B9%E7%9B%AE/Beans/WebRoot/WEB-INF/lib
+END
+aspectjrt.jar
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/core/!svn/ver/773/%E4%B8%89%E9%98%B6%E6%AE%B5%E9%A1%B9%E7%9B%AE/Beans/WebRoot/WEB-INF/lib/aspectjrt.jar
+END
+json-lib-2.2.3-jdk13.jar
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/core/!svn/ver/773/%E4%B8%89%E9%98%B6%E6%AE%B5%E9%A1%B9%E7%9B%AE/Beans/WebRoot/WEB-INF/lib/json-lib-2.2.3-jdk13.jar
+END
+spring-orm-3.2.6.RELEASE.jar
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/core/!svn/ver/773/%E4%B8%89%E9%98%B6%E6%AE%B5%E9%A1%B9%E7%9B%AE/Beans/WebRoot/WEB-INF/lib/spring-orm-3.2.6.RELEASE.jar
+END
+spring-context-3.2.6.RELEASE.jar
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/core/!svn/ver/773/%E4%B8%89%E9%98%B6%E6%AE%B5%E9%A1%B9%E7%9B%AE/Beans/WebRoot/WEB-INF/lib/spring-context-3.2.6.RELEASE.jar
+END
+validation-api-1.0.0.GA.jar
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/core/!svn/ver/773/%E4%B8%89%E9%98%B6%E6%AE%B5%E9%A1%B9%E7%9B%AE/Beans/WebRoot/WEB-INF/lib/validation-api-1.0.0.GA.jar
+END
+commons-beanutils.jar
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/core/!svn/ver/773/%E4%B8%89%E9%98%B6%E6%AE%B5%E9%A1%B9%E7%9B%AE/Beans/WebRoot/WEB-INF/lib/commons-beanutils.jar
+END
+spring-context-support-3.2.6.RELEASE.jar
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/core/!svn/ver/773/%E4%B8%89%E9%98%B6%E6%AE%B5%E9%A1%B9%E7%9B%AE/Beans/WebRoot/WEB-INF/lib/spring-context-support-3.2.6.RELEASE.jar
+END
+commons-collections-3.2.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/core/!svn/ver/773/%E4%B8%89%E9%98%B6%E6%AE%B5%E9%A1%B9%E7%9B%AE/Beans/WebRoot/WEB-INF/lib/commons-collections-3.2.1.jar
+END
+commons-lang-2.4.jar
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/core/!svn/ver/773/%E4%B8%89%E9%98%B6%E6%AE%B5%E9%A1%B9%E7%9B%AE/Beans/WebRoot/WEB-INF/lib/commons-lang-2.4.jar
+END
+ezmorph-1.0.6.jar
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/core/!svn/ver/773/%E4%B8%89%E9%98%B6%E6%AE%B5%E9%A1%B9%E7%9B%AE/Beans/WebRoot/WEB-INF/lib/ezmorph-1.0.6.jar
+END
+commons-logging-1.1.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/core/!svn/ver/773/%E4%B8%89%E9%98%B6%E6%AE%B5%E9%A1%B9%E7%9B%AE/Beans/WebRoot/WEB-INF/lib/commons-logging-1.1.1.jar
+END
+slf4j-api-1.7.5.jar
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/core/!svn/ver/773/%E4%B8%89%E9%98%B6%E6%AE%B5%E9%A1%B9%E7%9B%AE/Beans/WebRoot/WEB-INF/lib/slf4j-api-1.7.5.jar
+END
+c3p0-0.9.1.2.jar
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/core/!svn/ver/773/%E4%B8%89%E9%98%B6%E6%AE%B5%E9%A1%B9%E7%9B%AE/Beans/WebRoot/WEB-INF/lib/c3p0-0.9.1.2.jar
+END
+slf4j-log4j12-1.7.5.jar
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/core/!svn/ver/773/%E4%B8%89%E9%98%B6%E6%AE%B5%E9%A1%B9%E7%9B%AE/Beans/WebRoot/WEB-INF/lib/slf4j-log4j12-1.7.5.jar
+END
+spring-jdbc-3.2.6.RELEASE.jar
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/core/!svn/ver/773/%E4%B8%89%E9%98%B6%E6%AE%B5%E9%A1%B9%E7%9B%AE/Beans/WebRoot/WEB-INF/lib/spring-jdbc-3.2.6.RELEASE.jar
+END
+asm-3.3.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/core/!svn/ver/773/%E4%B8%89%E9%98%B6%E6%AE%B5%E9%A1%B9%E7%9B%AE/Beans/WebRoot/WEB-INF/lib/asm-3.3.1.jar
+END
+commons-io.jar
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/core/!svn/ver/773/%E4%B8%89%E9%98%B6%E6%AE%B5%E9%A1%B9%E7%9B%AE/Beans/WebRoot/WEB-INF/lib/commons-io.jar
+END
+hibernate-validator-4.3.0.Final.jar
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/core/!svn/ver/773/%E4%B8%89%E9%98%B6%E6%AE%B5%E9%A1%B9%E7%9B%AE/Beans/WebRoot/WEB-INF/lib/hibernate-validator-4.3.0.Final.jar
+END
+spring-aop-3.2.6.RELEASE.jar
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/core/!svn/ver/773/%E4%B8%89%E9%98%B6%E6%AE%B5%E9%A1%B9%E7%9B%AE/Beans/WebRoot/WEB-INF/lib/spring-aop-3.2.6.RELEASE.jar
+END
+spring-beans-3.2.6.RELEASE.jar
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/core/!svn/ver/773/%E4%B8%89%E9%98%B6%E6%AE%B5%E9%A1%B9%E7%9B%AE/Beans/WebRoot/WEB-INF/lib/spring-beans-3.2.6.RELEASE.jar
+END
+spring-tx-3.2.6.RELEASE.jar
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/core/!svn/ver/773/%E4%B8%89%E9%98%B6%E6%AE%B5%E9%A1%B9%E7%9B%AE/Beans/WebRoot/WEB-INF/lib/spring-tx-3.2.6.RELEASE.jar
+END
+junit-4.9b2.jar
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/core/!svn/ver/773/%E4%B8%89%E9%98%B6%E6%AE%B5%E9%A1%B9%E7%9B%AE/Beans/WebRoot/WEB-INF/lib/junit-4.9b2.jar
+END
+mybatis-spring-1.1.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/core/!svn/ver/773/%E4%B8%89%E9%98%B6%E6%AE%B5%E9%A1%B9%E7%9B%AE/Beans/WebRoot/WEB-INF/lib/mybatis-spring-1.1.1.jar
+END
+spring-webmvc-3.2.6.RELEASE.jar
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/core/!svn/ver/773/%E4%B8%89%E9%98%B6%E6%AE%B5%E9%A1%B9%E7%9B%AE/Beans/WebRoot/WEB-INF/lib/spring-webmvc-3.2.6.RELEASE.jar
+END
+log4j-1.2.17.jar
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/core/!svn/ver/773/%E4%B8%89%E9%98%B6%E6%AE%B5%E9%A1%B9%E7%9B%AE/Beans/WebRoot/WEB-INF/lib/log4j-1.2.17.jar
+END
+aopalliance.jar
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/core/!svn/ver/773/%E4%B8%89%E9%98%B6%E6%AE%B5%E9%A1%B9%E7%9B%AE/Beans/WebRoot/WEB-INF/lib/aopalliance.jar
+END
+commons-logging.jar
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/core/!svn/ver/773/%E4%B8%89%E9%98%B6%E6%AE%B5%E9%A1%B9%E7%9B%AE/Beans/WebRoot/WEB-INF/lib/commons-logging.jar
+END
+javassist-3.17.1-GA.jar
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/core/!svn/ver/773/%E4%B8%89%E9%98%B6%E6%AE%B5%E9%A1%B9%E7%9B%AE/Beans/WebRoot/WEB-INF/lib/javassist-3.17.1-GA.jar
+END
+spring-web-3.2.6.RELEASE.jar
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/core/!svn/ver/773/%E4%B8%89%E9%98%B6%E6%AE%B5%E9%A1%B9%E7%9B%AE/Beans/WebRoot/WEB-INF/lib/spring-web-3.2.6.RELEASE.jar
+END
+log4j-api-2.0-rc1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/core/!svn/ver/773/%E4%B8%89%E9%98%B6%E6%AE%B5%E9%A1%B9%E7%9B%AE/Beans/WebRoot/WEB-INF/lib/log4j-api-2.0-rc1.jar
+END
+aspectjweaver.jar
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/core/!svn/ver/773/%E4%B8%89%E9%98%B6%E6%AE%B5%E9%A1%B9%E7%9B%AE/Beans/WebRoot/WEB-INF/lib/aspectjweaver.jar
+END
+commons-fileupload.jar
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/core/!svn/ver/773/%E4%B8%89%E9%98%B6%E6%AE%B5%E9%A1%B9%E7%9B%AE/Beans/WebRoot/WEB-INF/lib/commons-fileupload.jar
+END
+spring-expression-3.2.6.RELEASE.jar
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/core/!svn/ver/773/%E4%B8%89%E9%98%B6%E6%AE%B5%E9%A1%B9%E7%9B%AE/Beans/WebRoot/WEB-INF/lib/spring-expression-3.2.6.RELEASE.jar
+END
+mybatis-3.2.7.jar
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/core/!svn/ver/773/%E4%B8%89%E9%98%B6%E6%AE%B5%E9%A1%B9%E7%9B%AE/Beans/WebRoot/WEB-INF/lib/mybatis-3.2.7.jar
+END
+spring-aspects-3.2.6.RELEASE.jar
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/core/!svn/ver/773/%E4%B8%89%E9%98%B6%E6%AE%B5%E9%A1%B9%E7%9B%AE/Beans/WebRoot/WEB-INF/lib/spring-aspects-3.2.6.RELEASE.jar
+END
+jboss-logging-3.1.0.CR2.jar
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/core/!svn/ver/773/%E4%B8%89%E9%98%B6%E6%AE%B5%E9%A1%B9%E7%9B%AE/Beans/WebRoot/WEB-INF/lib/jboss-logging-3.1.0.CR2.jar
+END
+spring-core-3.2.6.RELEASE.jar
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/core/!svn/ver/773/%E4%B8%89%E9%98%B6%E6%AE%B5%E9%A1%B9%E7%9B%AE/Beans/WebRoot/WEB-INF/lib/spring-core-3.2.6.RELEASE.jar
+END
+log4j-core-2.0-rc1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/core/!svn/ver/773/%E4%B8%89%E9%98%B6%E6%AE%B5%E9%A1%B9%E7%9B%AE/Beans/WebRoot/WEB-INF/lib/log4j-core-2.0-rc1.jar
+END
+ojdbc14.jar
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/core/!svn/ver/773/%E4%B8%89%E9%98%B6%E6%AE%B5%E9%A1%B9%E7%9B%AE/Beans/WebRoot/WEB-INF/lib/ojdbc14.jar
+END
+cglib-2.2.2.jar
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/core/!svn/ver/773/%E4%B8%89%E9%98%B6%E6%AE%B5%E9%A1%B9%E7%9B%AE/Beans/WebRoot/WEB-INF/lib/cglib-2.2.2.jar
+END

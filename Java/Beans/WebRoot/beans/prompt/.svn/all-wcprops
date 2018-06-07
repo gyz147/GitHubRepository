@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/core/!svn/ver/773/%E4%B8%89%E9%98%B6%E6%AE%B5%E9%A1%B9%E7%9B%AE/Beans/WebRoot/beans/prompt
+END
+error.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/core/!svn/ver/773/%E4%B8%89%E9%98%B6%E6%AE%B5%E9%A1%B9%E7%9B%AE/Beans/WebRoot/beans/prompt/error.jsp
+END
+quit.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/core/!svn/ver/773/%E4%B8%89%E9%98%B6%E6%AE%B5%E9%A1%B9%E7%9B%AE/Beans/WebRoot/beans/prompt/quit.jsp
+END
+configQuit.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/core/!svn/ver/773/%E4%B8%89%E9%98%B6%E6%AE%B5%E9%A1%B9%E7%9B%AE/Beans/WebRoot/beans/prompt/configQuit.jsp
+END
+userControl.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/core/!svn/ver/773/%E4%B8%89%E9%98%B6%E6%AE%B5%E9%A1%B9%E7%9B%AE/Beans/WebRoot/beans/prompt/userControl.jsp
+END
+joyBeansUserControl.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/core/!svn/ver/773/%E4%B8%89%E9%98%B6%E6%AE%B5%E9%A1%B9%E7%9B%AE/Beans/WebRoot/beans/prompt/joyBeansUserControl.jsp
+END
+success.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/core/!svn/ver/773/%E4%B8%89%E9%98%B6%E6%AE%B5%E9%A1%B9%E7%9B%AE/Beans/WebRoot/beans/prompt/success.jsp
+END

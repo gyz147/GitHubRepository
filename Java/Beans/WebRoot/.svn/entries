@@ -1,0 +1,72 @@
+10
+
+dir
+773
+http://10.0.6.98/svn/core/%E4%B8%89%E9%98%B6%E6%AE%B5%E9%A1%B9%E7%9B%AE/Beans/WebRoot
+http://10.0.6.98/svn/core
+
+
+
+2016-12-08T07:38:03.725283Z
+773
+stu
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+4c389d00-beb8-a64c-96d5-b1accb1cbc81
+
+
+
+
+
+
+0
+empty
+
+META-INF
+dir
+
+WEB-INF
+dir
+
+beans
+dir
+
+css
+dir
+
+images
+dir
+
+img
+dir
+
+
+
+add
+
+index.jsp
+file
+0
+
+
+add
+
+js
+dir
+
+
+
+add
+

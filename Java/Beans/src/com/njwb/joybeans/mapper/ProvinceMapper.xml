@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.njwb.joybeans.mapper.ProvinceMapper">
+	<resultMap type="Province" id="provinceMap">
+		<result column="prov_code" property="provCode"/>
+		<result column="prov_name" property="provName"/>
+	</resultMap>
+	
+	<select id="queryAllNotSecretCard" resultMap="provinceMap">
+		select prov_code,prov_name from t_province where prov_code not in
+		(select distinct card_prov from t_secret_card where card_status != '3')
+	</select>
+	
+	<select id="queryAllNotBeansExchange" parameterType="string" resultMap="provinceMap">
+		select prov_code,prov_name from t_province where prov_code not in
+		(select distinct prov_code from t_beans_exchange)
+		<if test="value!=null">
+			and prov_name like #{provName}
+		</if>
+	</select>
+</mapper>

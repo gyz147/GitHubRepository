@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.njwb.joybeans.mapper.BeansExchangeMapper">
+	<resultMap type="BeansExchange" id="BeansExchangeMap">
+		<id property="id" column="id"/>
+		<result property="provCode" column="prov_code"/>
+		<result property="provName" column="prov_name"/>  
+        <result property="price" column="price"/>  
+        <result property="modifyTime" column="modify_time"/>  
+        <result property="createTime" column="create_time"/>
+	</resultMap>
+	
+	<select id="queryAllByCondition" parameterType="map" resultMap="BeansExchangeMap">
+	  select id,prov_code,prov_name,price,modify_time,create_time from
+		(select id,prov_code,prov_name,price,modify_time,create_time,rownum as rn from
+		  (
+		  select id,t_beans_exchange.prov_code,prov_name,price,modify_time,create_time from t_beans_exchange,t_province where t_beans_exchange.prov_code=t_province.prov_code
+		  <if test="provName != null ">
+		   	and prov_name like #{provName}
+		 </if>
+		  order by id asc
+		  ))where rn > (#{pageNo}-1)*#{pageSize} <![CDATA[and rn <= (#{pageNo}-1)*#{pageSize}+#{pageSize}]]> 
+	</select>
+	
+	<select id="queryCnt" parameterType="map" resultType="int">
+		select count(0) from t_beans_exchange,t_province where t_beans_exchange.prov_code=t_province.prov_code
+			<if test="provName != null ">
+				and prov_name like #{provName}
+			</if>
+	</select>
+	
+	<select id="queryById" parameterType="string" resultMap="BeansExchangeMap">
+		select id,t_beans_exchange.prov_code,prov_name,price,modify_time,create_time from t_beans_exchange,t_province 
+		where t_beans_exchange.prov_code=t_province.prov_code and id=#{id}
+	</select>
+	
+	<select id="queryByProvCode" parameterType="string" resultMap="BeansExchangeMap">
+		select id,prov_code,price from t_beans_exchange where prov_code=#{provCode}
+	</select>
+	
+	<insert id="insertBeansExchange" parameterType="BeansExchange">
+		insert into t_beans_exchange(id,prov_code,price,create_time,modify_time)
+		values(seq_beans_exchange.nextval,#{provCode},#{price},sysdate,sysdate)
+	</insert>
+	<update id="updateBeansExchange" parameterType="BeansExchange">
+		update t_beans_exchange set price=#{price},modify_time=sysdate where id=#{id}
+	</update>
+	<delete id="deleteBeansExchange" parameterType="string">
+		delete from t_beans_exchange where id=#{id}
+	</delete>
+</mapper>

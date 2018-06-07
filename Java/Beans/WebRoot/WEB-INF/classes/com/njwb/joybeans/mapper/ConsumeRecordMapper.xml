@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.njwb.joybeans.mapper.ConsumeRecordMapper">
+	<resultMap type="ConsumeRecord" id="consumeRecordMap">
+		<id column="id" property="id"/>
+		<result column="game_id" property="gameId"/>
+		<result column="consumer_id" property="consumerId"/>
+		<result column="price" property="price"/>
+		<result column="buy_type" property="buyType"/>
+		<result column="send_beans" property="sendBeans"/>
+		<result column="down_count" property="downCount"/>
+		<result column="create_time" property="createTime"/>
+	</resultMap>
+	
+	<resultMap type="ConsumeRecordWrapper" id="consumeRecordWrapperMap">
+		<id column="id" property="id"/>
+		<result column="game_id" property="gameId"/>
+		<result column="game_name" property="gameName"/>
+		<result column="game_picture" property="picture"/>
+		<result column="consumer_id" property="consumerId"/>
+		<result column="price" property="price"/>
+		<result column="buy_type" property="buyType"/>
+		<result column="send_beans" property="sendBeans"/>
+		<result column="down_count" property="downCount"/>
+		<result column="create_time" property="createTime"/>
+	</resultMap>
+	
+	<select id="queryByUserIdAndGameId" parameterType="map" resultMap="consumeRecordMap">
+		select id,game_id,consumer_id,price,buy_type,send_beans,down_count,create_time from
+		(select id,game_id,consumer_id,price,buy_type,send_beans,down_count,create_time,rownum as rn from
+		(select id,game_id,consumer_id,price,buy_type,send_beans,down_count,create_time from t_consume_record 
+		where game_id=#{gameId} and consumer_id=#{consumerId} order by id desc))where rn=1
+	</select>	
+	
+	<select id="queryByConsumerId" parameterType="map" resultMap="consumeRecordWrapperMap">
+		select id,game_id,game_name,game_picture,consumer_id,price,buy_type,send_beans,down_count,create_time from
+		(select id,game_id,game_name,game_picture,consumer_id,price,buy_type,send_beans,down_count,create_time,rownum as rn from    
+		(select t_consume_record.id,game_id,game_name,game_picture,consumer_id,price,buy_type,send_beans,down_count,t_consume_record.create_time from t_consume_record,t_game
+		where game_id=t_game.id and consumer_id=#{consumerId} order by id desc))
+   		where rn > (#{pageNo}-1)*#{pageSize} <![CDATA[and rn <= (#{pageNo}-1)*#{pageSize}+#{pageSize}]]>
+	</select>
+	
+	<select id="queryCnt" parameterType="map" resultType="int">
+		select count(0) from t_consume_record where consumer_id=#{consumerId}
+	</select>
+	
+	<insert id="insertConsumeRecord" parameterType="ConsumeRecord">
+		insert into t_consume_record(id,game_id,consumer_id,price,buy_type,send_beans,down_count,create_time)
+		values(seq_consume_record.nextval,#{gameId},#{consumerId},#{price},#{buyType},#{sendBeans},'0',sysdate)	
+	</insert>
+	
+	<update id="updateDownLoadCnt" parameterType="string">
+		update t_consume_record set down_count=down_count+1 where id=#{id}
+	</update>
+</mapper>

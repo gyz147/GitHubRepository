@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.njwb.joybeans.mapper.GameMapper">
+	<resultMap type="Game" id="gameMap">
+		<id column="id" property="id"/>
+		<result column="game_name" property="gameName"/>
+		<result column="game_type" property="gameType"/>
+		<result column="type_name" property="typeName"/>
+		<result column="game_picture" property="gamePicture"/>
+		<result column="game_status" property="gameStatus"/>
+		<result column="game_detail" property="gameDetail"/>
+		<result column="game_fee" property="gameFee"/>
+		<result column="game_beans" property="gameBeans"/>
+		<result column="create_time" property="createTime"/>
+		<result column="modify_time" property="modifyTime"/>
+	</resultMap>
+	
+	<select id="queryAllGame" parameterType="map" resultMap="gameMap">
+		select id,game_name,game_type,type_name,game_picture,game_status,game_fee,game_beans,create_time,modify_time from
+		(select id,game_name,game_type,type_name,game_picture,game_status,game_fee,game_beans,create_time,modify_time,rownum as rn from
+		(select t_game.id,game_name,game_type,type_name,game_picture,game_status,game_fee,game_beans,t_game.create_time,t_game.modify_time from t_game,t_game_type 
+		where game_type=t_game_type.id
+		<if test="gameName!=''">
+			and game_name like #{gameName}
+		</if>	
+		<if test="gameType!=''">
+			and game_type=#{gameType}
+		</if>
+		order by id asc))
+		where rn > (#{pageNo}-1)*#{pageSize} <![CDATA[and rn <= (#{pageNo}-1)*#{pageSize}+#{pageSize}]]> 
+	</select>
+	
+	<select id="queryCnt" parameterType="map" resultType="int">
+		select count(0) from t_game,t_game_type where game_type=t_game_type.id
+		<if test="gameName!=''">
+			and game_name like #{gameName}
+		</if>	
+		<if test="gameType!=''">
+			and game_type=#{gameType}
+		</if>
+	</select>
+	
+	<insert id="addGame" parameterType="Game">
+		insert into t_game(id,game_name,game_type,game_picture,game_detail,game_status,game_fee,game_beans,modify_time,create_time)
+		values(seq_game.nextval,#{gameName},#{gameType},#{gamePicture},#{gameDetail},#{gameStatus},#{gameFee},#{gameBeans},sysdate,sysdate)
+	</insert>
+	
+	<update id="updateGame" parameterType="Game">
+		update t_game set game_name=#{gameName},
+						  game_type=#{gameType},
+						  game_picture=#{gamePicture},
+						  game_detail=#{gameDetail},
+						  game_status=#{gameStatus},
+						  game_fee=#{gameFee},
+						  game_beans=#{gameBeans},
+						  modify_time=sysdate
+		where id=#{id}
+	</update>
+	
+	<select id="queryGame" parameterType="string" resultMap="gameMap">
+		select id,game_name,game_type,game_detail,game_picture,game_status,game_fee,game_beans,create_time from t_game where id=#{id}
+	</select>
+	
+	<select id="gameNameIsExist" parameterType="string" resultType="string">
+		select id from t_game where game_name=#{game}
+	</select>
+	
+</mapper>

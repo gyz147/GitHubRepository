@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.njwb.joybeans.mapper.JoyBeansUserMapper">
+	<resultMap type="JoyBeansUser" id="JoyBeansUserMap">
+		<id property="id" column="id"/>
+		<result property="userAccount" column="user_account"/>  
+        <result property="userPhone" column="user_phone"/>  
+        <result property="userStatus" column="user_status"/>  
+        <result property="userName" column="user_name"/>
+        <result property="feeBalance" column="fee_balance"/>
+        <result property="beansBalance" column="beans_balance"/>
+        <result property="secretBalance" column="secret_balance"/>
+        <result property="createTime" column="create_time"/>
+	</resultMap>
+	
+	<select id="loginByAccountPwd" parameterType="map" resultMap="JoyBeansUserMap">
+		select id,user_name,user_account,user_phone,user_status,create_time from t_joy_beans_user
+		where user_account=#{userAccount} and user_pwd=#{userPwd}	
+	</select>
+	
+	<select id="queryPhoneByAccount" parameterType="string" resultType="string">
+		select user_phone from t_joy_beans_user where user_account=#{userAccount}
+	</select>
+	
+	<select id="queryPhoneForRegister" parameterType="string" resultType="string">
+		select id from t_joy_beans_user where user_phone=#{userPhone}
+	</select>
+	
+	<select id="queryBalance" parameterType="string" resultMap="JoyBeansUserMap">
+		select id,fee_balance,beans_balance,secret_balance,user_phone from t_joy_beans_user where user_account=#{userAccount}
+	</select>
+	
+	<insert id="register" parameterType="JoyBeansUser">
+		insert into t_joy_beans_user(id, user_name,user_account ,user_pwd,user_phone,fee_balance,beans_balance,secret_balance,secret_code,user_status,modify_time,create_time)
+		values(seq_joy_beans_user.nextval,
+			   #{userName},
+			   #{userAccount},
+			   #{userPwd},
+			   #{userPhone},
+			   50,50,0,'',
+			   '1',
+			   sysdate,sysdate)
+	</insert>
+	
+	<select id="queryAllByCondition" parameterType="map" resultMap="JoyBeansUserMap">
+		select 
+        id,
+        user_name,
+        user_account,
+        user_phone,
+        user_status,
+        create_time 
+        from(
+                  select 
+                          id,
+                          user_name,
+                          user_account,
+                          user_phone,
+                          user_status,
+                          create_time ,
+                          rownum rn
+                          from(
+                                      select 
+                                              id,
+                                              user_name,
+                                              user_account,
+                                              user_phone,
+                                              user_status,
+                                              create_time 
+                                              from t_joy_beans_user
+                                              <where>
+                                              	  <if test="userName != null">
+								                  	and user_name like #{userName}
+								                  </if>
+								                   <if test="userAccount != null">
+								                  	and user_account like #{userAccount}
+								                  </if>
+								                   <if test="userPhone != null">
+								                  	and user_phone like #{userPhone}
+								                  </if>
+                                              </where>
+                                              order by id asc
+                                    )
+                  )where rn > (#{pageNo}-1)*#{pageSize} <![CDATA[and rn <= (#{pageNo}-1)*#{pageSize}+#{pageSize}]]> 
+	</select>
+	
+	<select id="queryCntByCondition" parameterType="map" resultType="int">
+		select count(0) from t_joy_beans_user
+		<where>
+			<if test="userName != null">
+				and user_name like #{userName}
+			</if>
+			<if test="userAccount != null">
+				and user_account like #{userAccount}
+			</if>
+			<if test="userPhone != null">
+				and user_phone like #{userPhone}
+			</if>
+		</where>
+	</select>
+	
+	<update id="updateJoyBeansUser" parameterType="map">
+		update t_joy_beans_user set user_status=#{userStatus},modify_time=sysdate where id = #{id}
+	</update>
+	
+	<update id="addSecretBalance" parameterType="map">
+		update t_joy_beans_user set secret_balance=#{secretBalance},secret_code=#{cardNo} where secret_balance=0 and id=#{id}
+	</update>
+	
+	<update id="updateBalance" parameterType="map">
+		update t_joy_beans_user set fee_balance=#{feeBalance},beans_balance=#{beansBalance},secret_balance=#{secretBalance} where id=#{id}
+	</update>
+</mapper>

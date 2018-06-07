@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.njwb.joybeans.mapper.GameTypeMapper">
+	<resultMap type="GameType" id="GameTypeMap">
+		<id column="id" property="id"/>
+		<result column="type_name" property="typeName"/>
+		<result column="type_status" property="typeStatus"/>
+		<result column="create_time" property="createTime"/>
+		<result column="modify_time" property="modifyTime"/>
+	</resultMap>
+	
+	<select id="queryAllGameType" parameterType="map" resultMap="GameTypeMap">
+	  select id,type_name,type_status,create_time,modify_time from
+		(select id,type_name,type_status,create_time,modify_time,rownum as rn from
+			(select id,type_name,type_status,create_time,modify_time from t_game_type
+			<where>
+				<if test="typeName!=''">
+					and type_name like #{typeName}
+				</if>
+				<if test="typeStatus!=''">
+					and type_status = #{typeStatus}
+				</if>
+			</where>
+			order by id asc))where rn > (#{pageNo}-1)*#{pageSize} <![CDATA[and rn <= (#{pageNo}-1)*#{pageSize}+#{pageSize}]]> 
+	</select>
+	
+	<select id="queryAllGameType2" resultMap="GameTypeMap">
+		select id,type_name,type_status,create_time,modify_time from t_game_type
+	</select>
+	
+	<select id="queryCnt" parameterType="map" resultType="int">
+		select count(0) from t_game_type
+		<where>
+			<if test="typeName!=''">
+				and type_name like #{typeName}
+			</if>
+			<if test="typeStatus!=''">
+				and type_status = #{typeStatus}
+			</if>
+		</where>
+	</select>
+	
+	<insert id="addGameType" parameterType="GameType">
+		insert into t_game_type(id,type_name,type_status,modify_time,create_time)
+		values(seq_game_type.nextval,#{typeName},#{typeStatus},sysdate,sysdate)
+	</insert>
+	
+	<update id="updateGameType" parameterType="GameType">
+		update t_game_type set type_name=#{typeName},type_status=#{typeStatus},modify_time=sysdate where id=#{id}
+	</update>
+	
+	<select id="queryById" parameterType="string" resultMap="GameTypeMap">
+		select id,type_name,type_status from t_game_type where id=#{id}
+	</select>
+	
+	<select id="gameTypeNameIsExist" parameterType="string" resultType="string">
+		select id from t_game_type where type_name=#{typeName}
+	</select>
+	
+	<select id="ableModifyStatus" parameterType="string" resultType="string">
+		select distinct game_status from t_game where game_type=(select id from t_game_type where id=#{id}) and game_status='1'
+	</select>
+</mapper>
