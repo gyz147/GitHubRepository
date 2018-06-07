@@ -1,0 +1,11 @@
+userDao=com.dearlg.game.dao.impl.UserDaoImpl
+gameDao=com.dearlg.game.dao.impl.GameDaoImpl
+downloadRecordDao=com.dearlg.game.dao.impl.DownloadRecordDaoImpl
+adminDao=com.dearlg.game.dao.impl.AdminDaoImpl
+rateRuleDao=com.dearlg.game.dao.impl.RateRuleDaoImpl
+gameTypeDao=com.dearlg.game.dao.impl.GameTypeDaoImpl
+tx=com.dearlg.game.transaction.impl.TransactionImpl
+userService=com.dearlg.game.service.impl.UserServiceImpl
+gameService=com.dearlg.game.service.impl.GameServiceImpl
+downRecordService=com.dearlg.game.service.impl.DownRecordServiceImpl
+adminService=com.dearlg.game.service.impl.AdminServiceImpl
